@@ -473,9 +473,9 @@ Example with 8 teams: 2nd in Random walk (7 points), 5th in Mean reversion
    drawdown. Lean against what you hold: when you own a lot, quote lower so
    you sell more (the starter's `SKEW` does this).
 5. **React the tick the news arrives.** Cancels happen before new orders, so
-   a bot that moves its quotes as soon as a hint lands never gets caught on
-   an old price. A slow bot does: that's the house market maker's weak
-   spot.
+   a bot that moves its quotes the tick a hint lands can always pull its old
+   ones before anyone trades with them. A slow bot gets picked off: that's
+   the house market maker's weak spot.
 6. **Doubt odd hints, trust precise ones.** In Jumps, about 1 rumour in 20
    is several dollars off, and the insider is rare but precise. A median
    shrugs off one wild hint; an average doesn't.
@@ -491,8 +491,8 @@ Example with 8 teams: 2nd in Random walk (7 points), 5th in Mean reversion
    totals instead of looping over the whole history every tick.
 10. **Watch the replays.** Your own, to see where you lose money (press V to
     show the true value). And the scrimmages, to see how other teams trade:
-    a replay shows its seed at the top, and
-    `python run_local.py --round jumps --seed <seed> --bots strategy.py`
+    a replay shows its round and seed at the top, and
+    `python run_local.py --round <round> --seed <seed> --bots strategy.py`
     rebuilds that market on your laptop (without the other teams).
 
 **A good target:** beat `bots/kalman_market_maker.py` on 20 or more fresh
