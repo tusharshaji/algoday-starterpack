@@ -1,0 +1,3 @@
+# replays, logs and Python caches
+out/
+__pycache__/
